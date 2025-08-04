@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router";
 
@@ -14,6 +13,12 @@ function Navbar() {
                     className="font-bold text-[#0000009f] transition hover:text-black"
                 >
                     Home
+                </Link>
+                <Link
+                    to={"/about"}
+                    className="font-bold text-[#0000009f] transition hover:text-black"
+                >
+                    About us
                 </Link>
                 <Link
                     to={"/volunteer"}

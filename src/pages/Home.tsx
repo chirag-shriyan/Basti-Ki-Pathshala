@@ -15,13 +15,16 @@ function Home() {
 
             {/* Banner */}
             <div className="w-full flex justify-center top-[80px] relative">
+                {/* Black tint */}
+                <div className="w-full h-[100vh] bg-black opacity-30 absolute z-10"></div>
+
                 {/* Home Page Background */}
                 <div
-                    className="w-full h-[100vh] bg-cover bg-no-repeat bg-position-[center_top_-500px] absolute  max-md:bg-position-[center_top_0px]"
+                    className="w-full h-[100vh] bg-cover bg-no-repeat bg-position-[center_top_-500px] absolute max-md:bg-position-[center_top_0px]"
                     style={{ backgroundImage: `url(${Home_Page_Background})` }}
                 ></div>
 
-                <div className="w-1/2 space-y-10 flex flex-col items-center text-white top-[200px] relative max-md:w-full max-md:p-5 max-md:top-[50px]">
+                <div className="w-1/2 space-y-10 flex flex-col items-center text-white top-[200px] relative max-md:w-full max-md:p-5 max-md:top-[50px] z-20">
                     <h1 className="text-8xl text-center max-md:text-4xl">
                         Basti Ki Pathshala Foundation​
                     </h1>
@@ -43,7 +46,7 @@ function Home() {
                 </div>
             </div>
 
-            <div className="w-full h-fit flex flex-col items-center z-10 top-[350px] relative">
+            <div className="w-full h-fit flex flex-col items-center top-[350px] relative max-md:top-[200px] z-20">
                 {/* About us */}
 
                 <div className="w-[70%] h-[650px] p-12 flex justify-between bg-white rounded shadow-2xl max-md:w-[90%] max-md:flex-col max-md:h-fit max-md:top-[150px]">
