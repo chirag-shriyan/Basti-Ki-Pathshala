@@ -5,29 +5,37 @@ import { Link } from "react-router";
 function Navbar() {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
+    function handleLink() {
+        window.scrollTo({ top: 0 });
+        setToggleMenu(false);
+    }
+
     useEffect(() => {
         console.log(toggleMenu);
-    }, []);
+    }, [toggleMenu]);
     return (
         <div className="w-full h-[80px] flex items-center justify-around bg-amber-50 top-0 fixed max-md:justify-between z-50">
-            <div>
+            <Link to={"/"} onClick={handleLink}>
                 <img src={Logo} alt="" className="w-16 h-16 max-md:ml-2" />
-            </div>
+            </Link>
             <div className="space-x-5 max-md:hidden">
                 <Link
                     to={"/"}
+                    onClick={handleLink}
                     className="font-bold text-[#0000009f] transition hover:text-black"
                 >
                     Home
                 </Link>
                 <Link
                     to={"/about"}
+                    onClick={handleLink}
                     className="font-bold text-[#0000009f] transition hover:text-black"
                 >
                     About us
                 </Link>
                 <Link
                     to={"/volunteer"}
+                    onClick={handleLink}
                     className="font-bold text-[#0000009f] transition hover:text-black"
                 >
                     Volunteer
@@ -61,18 +69,21 @@ function Navbar() {
             >
                 <Link
                     to={"/"}
+                    onClick={handleLink}
                     className="w-fit font-bold text-[#0000009f] transition hover:text-black"
                 >
                     Home
                 </Link>
                 <Link
                     to={"/about"}
+                    onClick={handleLink}
                     className="w-fit font-bold text-[#0000009f] transition hover:text-black"
                 >
                     About us
                 </Link>
                 <Link
                     to={"/volunteer"}
+                    onClick={handleLink}
                     className="w-fit font-bold text-[#0000009f] transition hover:text-black"
                 >
                     Volunteer
